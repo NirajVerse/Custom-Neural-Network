@@ -1,8 +1,6 @@
 
-#from . module import Module
-from .activation import relu
-from .functional import sigmoid
+from . module import Module
+from . import functional as F
+from . activation import Sigmoid, ReLU
 
-from . import functional
-
-__all__ = ['relu', 'sigmoid']
+__all__ = ['Sigmoid', 'ReLU']

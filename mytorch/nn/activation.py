@@ -1,6 +1,20 @@
-import numpy as np
+from .module import Module
+from .import functional as F
 from mytorch import Tensor
 
-def relu(x: Tensor):
-    return Tensor(np.maximum(0, x.numpy()))
+
+## implementing this as a wrapper
+
+class Sigmoid(Module):
+
+    def forward(self, x:Tensor) -> Tensor:
+        return F.sigmoid(x)
+    
+
+class ReLU(Module):
+    
+    def forward(self, x:Tensor) -> Tensor:
+        return F.relu(x)
+
+
 
