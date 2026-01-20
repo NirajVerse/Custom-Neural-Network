@@ -4,7 +4,9 @@ A custom neural network framework built from scratch.
 
 ## Current Progress
 
-- Custom Tensor implementation
+- Tensor Object Implemented: The backbone of Neural Network
+- Added ReLU and Sigmoid Function : 1/20/2026
+
 
 ## Goal
 
