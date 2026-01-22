@@ -22,3 +22,24 @@ def sigmoid(x: Tensor):
 
 def relu(x: Tensor):  ## implementing relu activation function: 
     return Tensor(np.maximum(0, x._data))   # as Relu just changes all the negatives into zeros and and all pos as it is
+
+
+def softmax(x: Tensor, dim: int = -1) -> Tensor:
+            ### BEGIN SOLUTION
+        # Numerical stability: subtract max to prevent overflow
+        x_max_data = np.max(x.data, axis=dim, keepdims=True)
+        x_max = Tensor(x_max_data)
+        x_shifted = x - x_max  # Tensor subtraction
+
+        # Compute exponentials
+        exp_values = Tensor(np.exp(x_shifted.data))
+
+        # Sum along dimension
+        exp_sum_data = np.sum(exp_values.data, axis=dim, keepdims=True)
+        exp_sum = Tensor(exp_sum_data)
+
+        # Normalize to get probabilities
+        result = exp_values / exp_sum
+        return result
+        ### END SOLUTION
+
