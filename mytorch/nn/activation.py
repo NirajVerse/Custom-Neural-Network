@@ -27,3 +27,7 @@ class Tanh(Module):
     def forward(self, x:Tensor) -> Tensor:
         return F.tanh(x)
 
+class GELU(Module):
+    def forward(self, x:Tensor) -> Tensor:
+        return F.gelu(x)
+    

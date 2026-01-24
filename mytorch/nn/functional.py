@@ -49,3 +49,12 @@ def tanh(x: Tensor): #implemnatiation of tanh
      return Tensor(np.tanh(x._data))
 
 
+## Gelu implementation: smooth approximation of relu : f(x) = x * Sigmoud(1.702* x)
+
+def gelu(x:Tensor):
+     
+     sigmoid_part = 1.0 / (1.0 + np.exp(-1.702 * x._data))
+     result = x._data * sigmoid_part
+     return Tensor(result)
+
+
