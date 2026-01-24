@@ -17,4 +17,13 @@ class ReLU(Module):
         return F.relu(x)
 
 
+class Softmax(Module):
+
+    def forward(self, x:Tensor) -> Tensor:
+        return F.softmax(x)
+
+
+class Tanh(Module):
+    def forward(self, x:Tensor) -> Tensor:
+        return F.tanh(x)
 

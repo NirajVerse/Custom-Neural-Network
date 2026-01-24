@@ -43,3 +43,9 @@ def softmax(x: Tensor, dim: int = -1) -> Tensor:
         return result
         ### END SOLUTION
 
+
+
+def tanh(x: Tensor): #implemnatiation of tanh
+     return Tensor(np.tanh(x._data))
+
+
