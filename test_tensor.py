@@ -10,6 +10,10 @@ result = Tanh()(x)
 x = Tensor([-1.0])
 result = Tanh()(x)
 
+
+x = Tensor([1,2,3])
+result = Softmax()(x)
+
 print(result)
 
 
