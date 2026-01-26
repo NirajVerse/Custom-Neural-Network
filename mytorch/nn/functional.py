@@ -24,7 +24,7 @@ def relu(x: Tensor):  ## implementing relu activation function:
     return Tensor(np.maximum(0, x._data))   # as Relu just changes all the negatives into zeros and and all pos as it is
 
 
-def softmax(x: Tensor, dim: int = -1) -> Tensor:
+def softmax(x: Tensor, dim: int = -1) -> Tensor:  # adding a softmax funciton
             ### BEGIN SOLUTION
         # Numerical stability: subtract max to prevent overflow
         x_max_data = np.max(x._data, axis=dim, keepdims=True)
