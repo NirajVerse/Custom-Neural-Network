@@ -6,9 +6,9 @@ from mytorch.nn import Sigmoid, ReLU, Softmax, Tanh, GELU
 from mytorch.nn import Linear
 
 
-x = Tensor([[1,2,3]])
+x = Tensor([[1,2]])
 
 linear = Linear(2,3)
 print(linear)
 out = linear(x)
-print(out)
+print(out.shape)

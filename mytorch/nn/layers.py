@@ -23,7 +23,7 @@ class Linear(Module):
 
         #xavier initialization for stable gradient
         scale = np.sqrt(XAVIER_SCALE_FACTOR / input_feature)
-        scale_weight = np.random.randn(input_feature, output_feature) * scale
+        scale_weight = np.random.randn(output_feature, input_feature) * scale
         self.weight = Tensor(scale_weight, requires_grad = True)
 
         #initialization for bias

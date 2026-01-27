@@ -62,9 +62,9 @@ def gelu(x:Tensor):
 #implemeting the linear layer -> pure math
 
 def linear(x: Tensor, weight: Tensor, bias:Tensor = None) -> Tensor:  
-    result = x@weight.transpose
+    result = x@weight.transpose()
 
     if bias is not None:
         result = result + bias
-    return Tensor(result)
+    return result
 
